@@ -1,0 +1,15 @@
+<mat-toolbar>
+  PWA APP
+</mat-toolbar>
+
+<mat-list>
+  <h3 mat-subheader>Categorías de Cocteles</h3>
+  <a mat-list-item *ngFor="let drink of drinks" (click)="buscar(drink)">
+    <mat-icon mat-list-icon>local_bar</mat-icon>
+    <h4 mat-line>{{drink.strCategory}}</h4>
+    <mat-icon>
+      keyboard_arrow_right
+    </mat-icon>
+  </a>
+  <mat-divider></mat-divider>
+</mat-list>

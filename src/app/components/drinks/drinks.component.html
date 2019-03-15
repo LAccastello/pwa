@@ -1,0 +1,18 @@
+<mat-toolbar>
+  <button mat-icon-button (click)="goBack()">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+  PWA APP
+</mat-toolbar>
+
+<mat-list>
+  <h3 mat-subheader>Bebidas con categoría {{category}}</h3>
+  <a mat-list-item *ngFor="let drink of drinks" (click)="buscar(drink)">
+    <mat-icon mat-list-icon>local_bar</mat-icon>
+    <h4 mat-line>{{drink.strDrink}}</h4>
+    <mat-icon>
+      keyboard_arrow_right
+    </mat-icon>
+  </a>
+  <mat-divider></mat-divider>
+</mat-list>
